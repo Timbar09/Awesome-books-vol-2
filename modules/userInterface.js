@@ -23,7 +23,8 @@ export default class UserInterface {
     if (booksList.childElementCount > 0) {
       emptyMessage.innerHTML = '';
     } else {
-      emptyMessage.innerHTML = '<span>Empty!</span>The book list is empty. Click the "add" link on the navbar and add anew book.';
+      emptyMessage.innerHTML =
+        '<span>Empty!</span>The book list is empty. Click the "add" link on the navigation bar and add a new book.';
     }
   }
 
@@ -40,7 +41,8 @@ export default class UserInterface {
 
   static bookAddSuccess() {
     const formTitle = document.querySelector('.section__title');
-    formTitle.innerHTML = '<span class="success-message"><i class="fa-regular fa-circle-check"></i> New book added!</span>';
+    formTitle.innerHTML =
+      '<span class="success-message"><i class="fa-regular fa-circle-check"></i> New book added!</span>';
     setTimeout(() => {
       formTitle.innerHTML = 'Add new book';
     }, 2000);

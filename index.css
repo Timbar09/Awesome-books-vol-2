@@ -36,7 +36,7 @@ body {
 }
 
 .container-pall {
-  padding: 3rem 2rem;
+  padding: 5rem 2rem 1rem;
 }
 
 .section {
@@ -45,6 +45,11 @@ body {
 
 .section .container {
   height: 85vh;
+}
+
+.section__date {
+  display: block;
+  text-align: right;
 }
 
 .section__title {
@@ -127,6 +132,7 @@ a {
 }
 
 .hero__description span {
+  padding-bottom: 0.75rem;
   display: block;
   font-size: 2rem;
 }
