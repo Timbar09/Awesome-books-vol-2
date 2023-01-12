@@ -121,8 +121,18 @@ a {
   font-size: 3rem;
 }
 
+.hero__description {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.hero__description span {
+  display: block;
+  font-size: 2rem;
+}
+
 .hero__collection {
-  height: 75%;
+  max-height: 75%;
   overflow-y: scroll;
 }
 
