@@ -3,12 +3,12 @@ import StoreBooks from './storage.js';
 
 export const booksList = document.querySelector('.hero__collection');
 
-export default class userInterface {
+export default class UserInterface {
   static loadBooks() {
     const books = StoreBooks.getBooks();
 
     books.forEach((book) => {
-      userInterface.addBook(book);
+      UserInterface.addBook(book);
     });
   }
 
@@ -23,8 +23,7 @@ export default class userInterface {
     if (booksList.childElementCount > 0) {
       emptyMessage.innerHTML = '';
     } else {
-      emptyMessage.innerHTML =
-        '<span>Empty!</span>The book list is empty. Click the "add" link on the navbar and add anew book.';
+      emptyMessage.innerHTML = '<span>Empty!</span>The book list is empty. Click the "add" link on the navbar and add anew book.';
     }
   }
 
@@ -41,8 +40,7 @@ export default class userInterface {
 
   static bookAddSuccess() {
     const formTitle = document.querySelector('.section__title');
-    formTitle.innerHTML =
-      '<span class="success-message"><i class="fa-regular fa-circle-check"></i> New book added!</span>';
+    formTitle.innerHTML = '<span class="success-message"><i class="fa-regular fa-circle-check"></i> New book added!</span>';
     setTimeout(() => {
       formTitle.innerHTML = 'Add new book';
     }, 2000);

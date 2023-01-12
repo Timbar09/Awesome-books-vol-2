@@ -1,11 +1,10 @@
 import Book from './book.js';
 import StoreBooks from './storage.js';
-import userInterface from './userInterface.js';
-import { booksList } from './userInterface.js';
+import UserInterface, { booksList } from './userInterface.js';
 
 window.addEventListener('load', () => {
-  userInterface.loadBooks();
-  userInterface.emptyListMessage();
+  UserInterface.loadBooks();
+  UserInterface.emptyListMessage();
 });
 
 const navLinks = document.querySelectorAll('.nav__link');
@@ -48,14 +47,14 @@ form.addEventListener('submit', (e) => {
   const book = new Book(authorText, titleText);
 
   StoreBooks.addBook(book);
-  userInterface.addBook(book);
-  userInterface.bookAddSuccess();
-  userInterface.clearForm();
-  userInterface.emptyListMessage();
+  UserInterface.addBook(book);
+  UserInterface.bookAddSuccess();
+  UserInterface.clearForm();
+  UserInterface.emptyListMessage();
 });
 
 booksList.addEventListener('click', (e) => {
-  userInterface.removeBook(e.target);
-  userInterface.emptyListMessage();
+  UserInterface.removeBook(e.target);
+  UserInterface.emptyListMessage();
   StoreBooks.removeBook(e.target);
 });
