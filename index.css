@@ -230,27 +230,33 @@ a {
   display: block;
 }
 
-.contact__details {
+/* .contact__details {
   display: flex;
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
-}
+} */
 
-.contact__detail li:not(:last-child) {
-  margin-bottom: 0.5rem;
+.contact__detail {
+  margin: 0 auto;
+  max-width: 7.5rem;
 }
 
 .contact__link {
+  margin-bottom: 0.25rem;
   display: inline-block;
+  position: relative;
+  left: 0;
+  width: 100%;
   padding: 0.5rem 1rem;
-  background-color: var(--lightGrey);
-  transition: background-color 150ms ease-in-out, color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+  color: white;
+  background-color: var(--black);
+  transition: opacity 150ms ease-in-out, left 150ms ease-in-out, box-shadow 150ms ease-in-out;
 }
 
 .contact__link:hover {
-  color: var(--white);
-  background-color: var(--black);
+  opacity: 0.8;
+  left: 0.5rem;
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.18);
 }
 
