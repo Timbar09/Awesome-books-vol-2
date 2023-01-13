@@ -117,10 +117,6 @@ a {
   opacity: 0.8;
 }
 
-.hero .container {
-  max-width: 70em;
-}
-
 .hero__title {
   text-align: center;
   font-size: 3rem;
@@ -139,6 +135,8 @@ a {
 
 .hero__collection {
   max-height: 75%;
+  max-width: 70em;
+  margin: 0 auto;
   overflow-y: scroll;
 }
 
