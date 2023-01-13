@@ -3,8 +3,10 @@ import StoreBooks from './storage.js';
 import UserInterface, { booksList } from './userInterface.js';
 
 window.addEventListener('load', () => {
+  UserInterface.currentDate();
   UserInterface.loadBooks();
   UserInterface.emptyListMessage();
+  UserInterface.pointToAddLink();
 });
 
 const navLinks = document.querySelectorAll('.nav__link');
@@ -51,10 +53,12 @@ form.addEventListener('submit', (e) => {
   UserInterface.bookAddSuccess();
   UserInterface.clearForm();
   UserInterface.emptyListMessage();
+  UserInterface.pointToAddLink();
 });
 
 booksList.addEventListener('click', (e) => {
   UserInterface.removeBook(e.target);
   UserInterface.emptyListMessage();
+  UserInterface.pointToAddLink();
   StoreBooks.removeBook(e.target);
 });
