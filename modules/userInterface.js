@@ -19,25 +19,51 @@ export default class UserInterface {
   }
 
   static currentDate() {
-    const refreshFunc = () => {
+    const refreshTime = () => {
       let theDay = '';
       let theMonth = '';
       let theHour = '';
       let theMinute = '';
 
-      DateTime.now().day < 10 ? (theDay = `0${DateTime.now().day}`) : (theDay = `${DateTime.now().day}`);
-      DateTime.now().month < 10 ? (theMonth = `0${DateTime.now().month}`) : (theMonth = `${DateTime.now().month}`);
-      DateTime.now().hour < 10 ? (theHour = `0${DateTime.now().hour}`) : (theHour = `${DateTime.now().hour}`);
-      DateTime.now().minute < 10 ? (theMinute = `0${DateTime.now().minute}`) : (theMinute = `${DateTime.now().minute}`);
+      const luxonDay = DateTime.now().day;
+      const luxonMonth = DateTime.now().month;
+      const luxonHour = DateTime.now().hour;
+      const luxonMinute = DateTime.now().minute;
+
+      if (luxonDay < 10) {
+        theDay = `0${luxonDay}`;
+      } else {
+        theDay = `${luxonDay}`;
+      }
+
+      if (luxonMonth < 10) {
+        theMonth = `0${luxonMonth}`;
+      } else {
+        theMonth = `${luxonMonth}`;
+      }
+
+      if (luxonHour < 10) {
+        theHour = `0${luxonHour}`;
+      } else {
+        theHour = `${luxonHour}`;
+      }
+
+      if (luxonMinute < 10) {
+        theMinute = `0${luxonMinute}`;
+      } else {
+        theMinute = `${luxonMinute}`;
+      }
 
       const date = `${theDay}.${theMonth}.${DateTime.now().year}`;
       const time = `${theHour}: ${theMinute}`;
       const displayDateTime = document.querySelectorAll('.section__date');
 
-      return displayDateTime.forEach((display) => (display.textContent = `${date}, ${time}`));
+      displayDateTime.forEach((display) => {
+        display.textContent = `${date}, ${time}`;
+      });
     };
 
-    setInterval(refreshFunc, 1000);
+    setInterval(refreshTime, 1000);
   }
 
   static emptyListMessage() {
@@ -46,8 +72,7 @@ export default class UserInterface {
     if (booksList.childElementCount > 0) {
       emptyMessage.innerHTML = '';
     } else {
-      emptyMessage.innerHTML =
-        '<span>Empty!</span>The book list is empty. <span class="addbook-pointer">Click the "add" link on the navigation bar</span> to add a new book.';
+      emptyMessage.innerHTML = '<span>Empty!</span>The book list is empty. <span class="addbook-pointer">Click the "add" link on the navigation bar</span> to add a new book.';
     }
   }
 
@@ -80,8 +105,7 @@ export default class UserInterface {
 
   static bookAddSuccess() {
     const formTitle = document.querySelector('.section__title');
-    formTitle.innerHTML =
-      '<span class="success-message"><i class="fa-regular fa-circle-check"></i> New book added!</span>';
+    formTitle.innerHTML = '<span class="success-message"><i class="fa-regular fa-circle-check"></i> New book added!</span>';
     setTimeout(() => {
       formTitle.innerHTML = 'Add new book';
     }, 2000);
