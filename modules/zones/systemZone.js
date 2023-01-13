@@ -1,5 +1,7 @@
-import { formatOffset, parseZoneInfo } from "../impl/util.js";
-import Zone from "../zone.js";
+/* eslint-disable */
+
+import { formatOffset, parseZoneInfo } from '../impl/util.js';
+import Zone from '../zone.js';
 
 let singleton = null;
 
@@ -21,7 +23,7 @@ export default class SystemZone extends Zone {
 
   /** @override **/
   get type() {
-    return "system";
+    return 'system';
   }
 
   /** @override **/
@@ -51,7 +53,7 @@ export default class SystemZone extends Zone {
 
   /** @override **/
   equals(otherZone) {
-    return otherZone.type === "system";
+    return otherZone.type === 'system';
   }
 
   /** @override **/

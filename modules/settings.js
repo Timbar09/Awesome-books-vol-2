@@ -1,11 +1,13 @@
-import SystemZone from "./zones/systemZone.js";
-import IANAZone from "./zones/IANAZone.js";
-import Locale from "./impl/locale.js";
+/* eslint-disable */
 
-import { normalizeZone } from "./impl/zoneUtil.js";
+import SystemZone from './zones/systemZone.js';
+import IANAZone from './zones/IANAZone.js';
+import Locale from './impl/locale.js';
+
+import { normalizeZone } from './impl/zoneUtil.js';
 
 let now = () => Date.now(),
-  defaultZone = "system",
+  defaultZone = 'system',
   defaultLocale = null,
   defaultNumberingSystem = null,
   defaultOutputCalendar = null,

@@ -1,4 +1,6 @@
-import Zone from "../zone.js";
+/* eslint-disable */
+
+import Zone from '../zone.js';
 
 /**
  * A zone that failed to parse. You should never need to instantiate this.
@@ -13,7 +15,7 @@ export default class InvalidZone extends Zone {
 
   /** @override **/
   get type() {
-    return "invalid";
+    return 'invalid';
   }
 
   /** @override **/
@@ -33,7 +35,7 @@ export default class InvalidZone extends Zone {
 
   /** @override **/
   formatOffset() {
-    return "";
+    return '';
   }
 
   /** @override **/

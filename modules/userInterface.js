@@ -20,7 +20,10 @@ export default class UserInterface {
 
   static currentDate() {
     const refreshFunc = () => {
-      let theDay, theMonth, theHour, theMinute;
+      let theDay = '';
+      let theMonth = '';
+      let theHour = '';
+      let theMinute = '';
 
       `${DateTime.now().day}`.length === 1 ? (theDay = `0${DateTime.now().day}`) : (theDay = `${DateTime.now().day}`);
       `${DateTime.now().month}`.length === 1
@@ -37,7 +40,7 @@ export default class UserInterface {
       const time = `${theHour}: ${theMinute}`;
       const displayDateTime = document.querySelectorAll('.section__date');
 
-      displayDateTime.forEach((display) => (display.textContent = `${date}, ${time}`));
+      return displayDateTime.forEach((display) => (display.textContent = `${date}, ${time}`));
     };
 
     setInterval(refreshFunc, 1000);
