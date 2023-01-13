@@ -25,16 +25,10 @@ export default class UserInterface {
       let theHour = '';
       let theMinute = '';
 
-      `${DateTime.now().day}`.length === 1 ? (theDay = `0${DateTime.now().day}`) : (theDay = `${DateTime.now().day}`);
-      `${DateTime.now().month}`.length === 1
-        ? (theMonth = `0${DateTime.now().month}`)
-        : (theMonth = `${DateTime.now().month}`);
-      `${DateTime.now().hour}`.length === 1
-        ? (theHour = `0${DateTime.now().hour}`)
-        : (theHour = `${DateTime.now().hour}`);
-      `${DateTime.now().minute}`.length === 1
-        ? (theMinute = `0${DateTime.now().minute}`)
-        : (theMinute = `${DateTime.now().minute}`);
+      DateTime.now().day < 10 ? (theDay = `0${DateTime.now().day}`) : (theDay = `${DateTime.now().day}`);
+      DateTime.now().month < 10 ? (theMonth = `0${DateTime.now().month}`) : (theMonth = `${DateTime.now().month}`);
+      DateTime.now().hour < 10 ? (theHour = `0${DateTime.now().hour}`) : (theHour = `${DateTime.now().hour}`);
+      DateTime.now().minute < 10 ? (theMinute = `0${DateTime.now().minute}`) : (theMinute = `${DateTime.now().minute}`);
 
       const date = `${theDay}.${theMonth}.${DateTime.now().year}`;
       const time = `${theHour}: ${theMinute}`;
@@ -53,7 +47,23 @@ export default class UserInterface {
       emptyMessage.innerHTML = '';
     } else {
       emptyMessage.innerHTML =
-        '<span>Empty!</span>The book list is empty. Click the "add" link on the navigation bar to add a new book.';
+        '<span>Empty!</span>The book list is empty. <span class="addbook-pointer">Click the "add" link on the navigation bar</span> to add a new book.';
+    }
+  }
+
+  static pointToAddLink() {
+    if (document.querySelector('.hero__description').innerHTML.length > 0) {
+      const addPointer = document.querySelector('.addbook-pointer');
+
+      addPointer.addEventListener('click', () => {
+        const addLink = document.querySelector('#add-book-link');
+
+        addLink.classList.add('highlight');
+
+        addLink.addEventListener('animationend', () => {
+          addLink.classList.remove('highlight');
+        });
+      });
     }
   }
 

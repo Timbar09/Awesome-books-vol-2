@@ -110,11 +110,26 @@ a {
 }
 
 .nav__link {
+  outline-offset: 0.25rem;
   transition: opacity 150ms ease-in-out;
 }
 
 .nav__link:hover {
   opacity: 0.8;
+}
+
+@keyframes point-out {
+  from {
+    outline: solid 2px transparent;
+  }
+
+  to {
+    outline: solid 2px var(--lime);
+  }
+}
+
+.highlight {
+  animation: point-out 1000ms ease-in-out 0ms 4 none;
 }
 
 .hero__title {
@@ -127,10 +142,21 @@ a {
   text-align: center;
 }
 
-.hero__description span {
+.hero__description span:first-child {
   padding-bottom: 0.75rem;
   display: block;
   font-size: 2rem;
+}
+
+.addbook-pointer {
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 150ms ease-in-out;
+}
+
+.addbook-pointer:hover {
+  color: var(--black);
+  text-decoration: none;
 }
 
 .hero__collection {
@@ -230,16 +256,9 @@ a {
   text-align: center;
 }
 
-.contact__description span {
+.contact__description .connect {
   display: block;
 }
-
-/* .contact__details {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-} */
 
 .contact__detail {
   margin: 0 auto;

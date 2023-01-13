@@ -18,7 +18,7 @@
   - [Prerequisites](#prerequisites)
   - [Usage](#usage)
   - [Deployment](#triangular_flag_on_post-deployment)
-- [👥 Authors](#authors)
+- [👥 Author](#author)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
@@ -57,7 +57,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- Visit the live demo [here](https://timbar09.github.io/Awesome-Books/)
+- Visit the live demo [here](https://timbar09.github.io/Awesome-books-vol-2/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -84,14 +84,14 @@ To clone this repository to your desired folder, follow the steps below:
 
 ```sh
   cd my-folder
-  git clone https://github.com/Timbar09/Awesome-Books.git
+  git clone https://github.com/Timbar09/Awesome-books-vol-2.git
 ```
 
 **Using GitHub Desktop app**
 
 - Follow the steps below
 
-  - Visit this link "https://github.com/Timbar09/Awesome-Books.git"
+  - Visit this link "https://github.com/Timbar09/Awesome-books-vol-2.git"
   - Click the green button labelled "code"
   - Select the "Open with GitHub Desktop" option
   - After the GitHub Desktop add opens, click the "clone repo" button
@@ -113,7 +113,7 @@ You can deploy this project by:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 👥 Authors <a name="authors"></a>
+## 👥 Author <a name="author"></a>
 
 👤 **Miles Mosweu**
 
@@ -121,11 +121,7 @@ You can deploy this project by:
 - Twitter: [@Milez09](https://twitter.com/Milez09)
 - LinkedIn: [@miles-mosweu09](https://www.linkedin.com/in/miles-mosweu09)
 
-👤 **Mohi**
-
-- GitHub: [@mohisa302](https://github.com/mohisa302)
-- Twitter: [@Kholochelam](https://twitter.com/Kholochelam)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/mohadese-sadeghi-692551199/)
+<br />
 
 ## 🤝 Contributing <a name="contributing"></a>
 
@@ -137,13 +133,13 @@ Feel free to check the [issues page](https://github.com/Timbar09/Africas-Leading
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project, give it a ⭐️ and let us know what you like in particular.
+If you like this project, give it a ⭐️ and let me know what you like in particular.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-We would like to thank the whole Microverse community for their help and contributions towards this project.
+I would like to thank the whole Microverse community for their help and contributions towards this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
