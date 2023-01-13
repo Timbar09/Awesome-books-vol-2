@@ -1,6 +1,6 @@
 import Book from './book.js';
 import StoreBooks from './storage.js';
-import { DateTime } from 'luxon';
+import { DateTime } from './luxon.js';
 
 export const booksList = document.querySelector('.hero__collection');
 
@@ -36,8 +36,6 @@ export default class UserInterface {
       const date = `${theDay}.${theMonth}.${DateTime.now().year}`;
       const time = `${theHour}: ${theMinute}`;
       const displayDateTime = document.querySelectorAll('.section__date');
-
-      console.log(`${DateTime.now().day}`.length);
 
       displayDateTime.forEach((display) => (display.textContent = `${date}, ${time}`));
     };
