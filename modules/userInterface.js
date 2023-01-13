@@ -1,6 +1,6 @@
 import Book from './book.js';
 import StoreBooks from './storage.js';
-import { DateTime } from '../node_modules/luxon/src/luxon.js';
+import { DateTime } from 'luxon';
 
 export const booksList = document.querySelector('.hero__collection');
 
