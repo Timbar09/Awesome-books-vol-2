@@ -1,5 +1,6 @@
 import Book from './book.js';
 import StoreBooks from './storage.js';
+import { DateTime } from '../node_modules/luxon/src/luxon.js';
 
 export const booksList = document.querySelector('.hero__collection');
 
@@ -15,6 +16,18 @@ export default class UserInterface {
   static clearForm() {
     document.querySelector('#title').value = '';
     document.querySelector('#author').value = '';
+  }
+
+  static currentDate() {
+    const refreshFunc = () => {
+      const date = `${DateTime.now().day}.${DateTime.now().month}.${DateTime.now().year}`;
+      const time = `${DateTime.now().hour}: ${DateTime.now().minute}`;
+      const displayDateTime = document.querySelectorAll('.section__date');
+
+      displayDateTime.forEach((display) => (display.textContent = `${date}, ${time}`));
+    };
+
+    setInterval(refreshFunc, 1000);
   }
 
   static emptyListMessage() {
