@@ -225,7 +225,7 @@ a {
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.18);
 }
 
-.contact .container {
+.contact__content {
   display: flex;
   flex-direction: column;
   justify-content: center;

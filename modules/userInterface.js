@@ -20,9 +20,24 @@ export default class UserInterface {
 
   static currentDate() {
     const refreshFunc = () => {
-      const date = `${DateTime.now().day}.${DateTime.now().month}.${DateTime.now().year}`;
-      const time = `${DateTime.now().hour}: ${DateTime.now().minute}`;
+      let theDay, theMonth, theHour, theMinute;
+
+      `${DateTime.now().day}`.length === 1 ? (theDay = `0${DateTime.now().day}`) : (theDay = `${DateTime.now().day}`);
+      `${DateTime.now().month}`.length === 1
+        ? (theMonth = `0${DateTime.now().month}`)
+        : (theMonth = `${DateTime.now().month}`);
+      `${DateTime.now().hour}`.length === 1
+        ? (theHour = `0${DateTime.now().hour}`)
+        : (theHour = `${DateTime.now().hour}`);
+      `${DateTime.now().minute}`.length === 1
+        ? (theMinute = `0${DateTime.now().minute}`)
+        : (theMinute = `${DateTime.now().minute}`);
+
+      const date = `${theDay}.${theMonth}.${DateTime.now().year}`;
+      const time = `${theHour}: ${theMinute}`;
       const displayDateTime = document.querySelectorAll('.section__date');
+
+      console.log(`${DateTime.now().day}`.length);
 
       displayDateTime.forEach((display) => (display.textContent = `${date}, ${time}`));
     };
@@ -37,7 +52,7 @@ export default class UserInterface {
       emptyMessage.innerHTML = '';
     } else {
       emptyMessage.innerHTML =
-        '<span>Empty!</span>The book list is empty. Click the "add" link on the navigation bar and add a new book.';
+        '<span>Empty!</span>The book list is empty. Click the "add" link on the navigation bar to add a new book.';
     }
   }
 
